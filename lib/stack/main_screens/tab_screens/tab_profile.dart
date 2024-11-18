@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rentit/main.dart';
+import 'package:go_router/go_router.dart';
 
 class TabProfile extends StatelessWidget {
   const TabProfile({super.key});
@@ -52,7 +54,14 @@ class TabProfile extends StatelessWidget {
                 height: 8,
               ),
               ListTile(
-                onTap: () {},
+                onTap: () {
+                   try{
+                    context.push("/transaction_history");
+                   }
+                   catch(err){
+
+                   }
+                },
                 leading: const Icon(Icons.history_edu),
                 title: const Text("Transaction History"),
               ),

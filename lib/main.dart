@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rentit/stack/auth_screens/auth_intro.dart';
-import 'package:rentit/stack/main_screens/intro.dart';
-import 'package:rentit/stack/main_screens/rent_it.dart';
+import 'package:rentit/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,18 +24,7 @@ final GoRouter _router = GoRouter(
       }
       return null; // No redirection
     },
-    routes: [
-      GoRoute(
-          path: "/",
-          builder: (_, state) {
-            return RentIt();
-          }),
-      GoRoute(
-          path: "/login",
-          builder: (_, state) {
-            return AuthIntro();
-          }),
-    ]);
+    routes: routes);
 
 class Routing extends StatelessWidget {
   const Routing({super.key});

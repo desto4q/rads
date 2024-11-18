@@ -31,9 +31,13 @@ class _RentItState extends State<RentIt> {
         children: _list,
       ),
       bottomNavigationBar: FlashyTabBar(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        
           selectedIndex: selectedIndex,
           items: _screens.map((ele) {
             return FlashyTabBarItem(
+              inactiveColor: Theme.of(context).colorScheme.onSurfaceVariant,
+              activeColor: Theme.of(context).colorScheme.surfaceTint,
                 icon: Icon(ele["icon"]), title: Text(ele["name"]));
           }).toList(),
           onItemSelected: (e) {
